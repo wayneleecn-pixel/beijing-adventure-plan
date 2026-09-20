@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 450" width="450" height="450">
+  <!-- Layer 1: Solid Gold Outer Shield (Beveled Rim Base) -->
+  <path d="M 225,25
+C 255,42 278,48 308,62
+C 332,74 345,95 356,120
+C 382,140 398,170 395,208
+C 392,232 380,250 375,272
+C 385,302 372,342 346,368
+C 312,392 268,414 225,435
+C 182,414 138,392 104,368
+C 78,342 65,302 75,272
+C 70,250 58,232 55,208
+C 52,170 68,140 94,120
+C 105,95 118,74 142,62
+C 172,48 195,42 225,25 Z" fill="#E5A823"/>
+
+  <!-- Layer 2: Sky Blue Inner Field Plate -->
+  <path d="M 225,50
+C 248,65 266,70 290,82
+C 310,92 320,108 328,128
+C 350,145 362,170 360,202
+C 358,220 348,235 344,252
+C 352,278 340,310 320,332
+C 292,352 258,370 225,388
+C 192,370 158,352 130,332
+C 110,310 98,278 106,252
+C 102,235 92,220 90,202
+C 88,170 100,145 122,128
+C 130,108 140,92 160,82
+C 184,70 202,65 225,50 Z" fill="#3B82C8"/>
+
+  <!-- Layer 3: Central Subject Vector Art -->
+
+  <!-- Flanking Laurel Wreath Branches (Left & Right Green Leaves) -->
+  <!-- Left Laurel Branch -->
+  <g fill="#2E7D47">
+    <path d="M 140,285 Q 120,230 140,165 Q 125,230 140,285" fill="#2E7D47"/>
+    <ellipse cx="128" cy="180" rx="12" ry="7" transform="rotate(-35 128 180)"/>
+    <ellipse cx="120" cy="210" rx="13" ry="8" transform="rotate(-15 120 210)"/>
+    <ellipse cx="122" cy="240" rx="13" ry="8" transform="rotate(10 122 240)"/>
+    <ellipse cx="132" cy="270" rx="12" ry="7" transform="rotate(30 132 270)"/>
+  </g>
+
+  <!-- Right Laurel Branch -->
+  <g fill="#2E7D47">
+    <path d="M 310,285 Q 330,230 310,165 Q 325,230 310,285" fill="#2E7D47"/>
+    <ellipse cx="322" cy="180" rx="12" ry="7" transform="rotate(35 322 180)"/>
+    <ellipse cx="330" cy="210" rx="13" ry="8" transform="rotate(15 330 210)"/>
+    <ellipse cx="328" cy="240" rx="13" ry="8" transform="rotate(-10 328 240)"/>
+    <ellipse cx="318" cy="270" rx="12" ry="7" transform="rotate(-30 318 270)"/>
+  </g>
+
+  <!-- Compass Rose Outer Dial Ring -->
+  <circle cx="225" cy="215" r="75" fill="none" stroke="#7A3E20" stroke-width="12"/>
+
+  <!-- 8-Pointed Faceted Starburst Compass Rose (Gold & Brown bevels) -->
+  <!-- North Point -->
+  <polygon points="225,120 225,215 210,215" fill="#E5A823"/>
+  <polygon points="225,120 225,215 240,215" fill="#7A3E20"/>
+
+  <!-- South Point -->
+  <polygon points="225,310 225,215 240,215" fill="#E5A823"/>
+  <polygon points="225,310 225,215 210,215" fill="#7A3E20"/>
+
+  <!-- East Point -->
+  <polygon points="320,215 225,215 225,200" fill="#E5A823"/>
+  <polygon points="320,215 225,215 225,230" fill="#7A3E20"/>
+
+  <!-- West Point -->
+  <polygon points="130,215 225,215 225,230" fill="#E5A823"/>
+  <polygon points="130,215 225,215 225,200" fill="#7A3E20"/>
+
+  <!-- 4 Minor Diagonal Points (NE, NW, SE, SW) -->
+  <polygon points="280,160 225,215 233,207" fill="#E5A823"/>
+  <polygon points="280,160 225,215 225,215" fill="#7A3E20"/>
+  <polygon points="170,160 225,215 217,207" fill="#7A3E20"/>
+  <polygon points="170,160 225,215 225,215" fill="#E5A823"/>
+  <polygon points="280,270 225,215 233,223" fill="#7A3E20"/>
+  <polygon points="280,270 225,215 225,215" fill="#E5A823"/>
+  <polygon points="170,270 225,215 217,223" fill="#E5A823"/>
+  <polygon points="170,270 225,215 225,215" fill="#7A3E20"/>
+
+  <!-- Central Hub Medallion -->
+  <circle cx="225" cy="215" r="18" fill="#E5A823"/>
+  <circle cx="225" cy="215" r="10" fill="#7A3E20"/>
+
+  <!-- North Crowning Star -->
+  <polygon points="225,92 229,102 240,102 231,108 234,118 225,112 216,118 219,108 210,102 221,102" fill="#E5A823"/>
+
+
+  <!-- Layer 4: Bottom Folded Ribbon Banner -->
+
+  <!-- Ribbon Left Fold Wing -->
+  <polygon points="125,335 80,335 98,365 72,395 125,375" fill="#2E7D47"/>
+  <polygon points="125,355 125,375 140,355" fill="#7A3E20"/>
+
+  <!-- Ribbon Right Fold Wing -->
+  <polygon points="325,335 370,335 352,365 378,395 325,375" fill="#2E7D47"/>
+  <polygon points="325,355 325,375 310,355" fill="#7A3E20"/>
+
+  <!-- Ribbon Main Center Banner -->
+  <path d="M 120,330 Q 225,342 330,330 L 330,375 Q 225,392 120,375 Z" fill="#2E7D47"/>
+
+</svg>

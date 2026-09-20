@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 450" width="450" height="450">
+  <!-- Layer 1: Solid Gold Outer Shield (Beveled Rim Base) -->
+  <path d="M 225,25
+C 255,42 278,48 308,62
+C 332,74 345,95 356,120
+C 382,140 398,170 395,208
+C 392,232 380,250 375,272
+C 385,302 372,342 346,368
+C 312,392 268,414 225,435
+C 182,414 138,392 104,368
+C 78,342 65,302 75,272
+C 70,250 58,232 55,208
+C 52,170 68,140 94,120
+C 105,95 118,74 142,62
+C 172,48 195,42 225,25 Z" fill="#E5A823"/>
+
+  <!-- Layer 2: Sky Blue Inner Field Plate -->
+  <path d="M 225,50
+C 248,65 266,70 290,82
+C 310,92 320,108 328,128
+C 350,145 362,170 360,202
+C 358,220 348,235 344,252
+C 352,278 340,310 320,332
+C 292,352 258,370 225,388
+C 192,370 158,352 130,332
+C 110,310 98,278 106,252
+C 102,235 92,220 90,202
+C 88,170 100,145 122,128
+C 130,108 140,92 160,82
+C 184,70 202,65 225,50 Z" fill="#3B82C8"/>
+
+  <!-- Layer 3: Central Subject Vector Art -->
+
+  <!-- Ancient Bronze Ding Ritual Cauldron Vessel -->
+  <!-- 3 Sturdy Cauldron Legs -->
+  <polygon points="160,240 180,240 172,305 152,305" fill="#7A3E20"/>
+  <polygon points="215,240 235,240 232,310 218,310" fill="#7A3E20"/>
+  <polygon points="270,240 290,240 298,305 278,305" fill="#7A3E20"/>
+
+  <!-- Ding Main Body Bowl -->
+  <path d="M 145,150 L 305,150 C 315,210 295,250 225,255 C 155,250 135,210 145,150 Z" fill="#7A3E20"/>
+
+  <!-- Ding Top Loop Handles -->
+  <path d="M 152,150 L 152,120 L 172,120 L 172,150 Z" fill="#E5A823"/>
+  <path d="M 278,150 L 278,120 L 298,120 L 298,150 Z" fill="#E5A823"/>
+
+  <!-- Ding Ornamental Gold Inlay Band -->
+  <rect x="150" y="165" width="150" height="20" rx="3" fill="#E5A823"/>
+  <circle cx="180" cy="175" r="5" fill="#7A3E20"/>
+  <circle cx="225" cy="175" r="5" fill="#7A3E20"/>
+  <circle cx="270" cy="175" r="5" fill="#7A3E20"/>
+
+  <!-- Explorer Magnifying Glass (Right Side) -->
+  <!-- Handle -->
+  <polygon points="295,245 340,290 328,302 283,257" fill="#7A3E20"/>
+  <!-- Gold Rim -->
+  <circle cx="275" cy="225" r="32" fill="#E5A823"/>
+  <!-- Inner Glass Lens -->
+  <circle cx="275" cy="225" r="20" fill="#3B82C8"/>
+
+  <!-- 4-Pointed Discovery Stars (>=1.5mm) -->
+  <path d="M 130,105 Q 135,115 145,115 Q 135,115 130,125 Q 125,115 115,115 Q 125,115 130,105 Z" fill="#E5A823"/>
+  <path d="M 320,120 Q 324,128 332,128 Q 324,128 320,136 Q 316,128 308,128 Q 316,128 320,120 Z" fill="#E5A823"/>
+
+
+  <!-- Layer 4: Bottom Folded Ribbon Banner -->
+
+  <!-- Ribbon Left Fold Wing -->
+  <polygon points="125,335 80,335 98,365 72,395 125,375" fill="#2E7D47"/>
+  <polygon points="125,355 125,375 140,355" fill="#7A3E20"/>
+
+  <!-- Ribbon Right Fold Wing -->
+  <polygon points="325,335 370,335 352,365 378,395 325,375" fill="#2E7D47"/>
+  <polygon points="325,355 325,375 310,355" fill="#7A3E20"/>
+
+  <!-- Ribbon Main Center Banner -->
+  <path d="M 120,330 Q 225,342 330,330 L 330,375 Q 225,392 120,375 Z" fill="#2E7D47"/>
+
+</svg>

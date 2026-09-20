@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 450" width="450" height="450">
+  <!-- Layer 1: Solid Gold Outer Shield (Beveled Rim Base) -->
+  <path d="M 225,25
+C 255,42 278,48 308,62
+C 332,74 345,95 356,120
+C 382,140 398,170 395,208
+C 392,232 380,250 375,272
+C 385,302 372,342 346,368
+C 312,392 268,414 225,435
+C 182,414 138,392 104,368
+C 78,342 65,302 75,272
+C 70,250 58,232 55,208
+C 52,170 68,140 94,120
+C 105,95 118,74 142,62
+C 172,48 195,42 225,25 Z" fill="#E5A823"/>
+
+  <!-- Layer 2: Sky Blue Inner Field Plate -->
+  <path d="M 225,50
+C 248,65 266,70 290,82
+C 310,92 320,108 328,128
+C 350,145 362,170 360,202
+C 358,220 348,235 344,252
+C 352,278 340,310 320,332
+C 292,352 258,370 225,388
+C 192,370 158,352 130,332
+C 110,310 98,278 106,252
+C 102,235 92,220 90,202
+C 88,170 100,145 122,128
+C 130,108 140,92 160,82
+C 184,70 202,65 225,50 Z" fill="#3B82C8"/>
+
+  <!-- Layer 3: Central Subject Vector Art -->
+
+  <!-- Sweeping Film Strip Behind Clapperboard -->
+  <path d="M 100,160 C 150,90 300,80 340,150 C 370,200 340,280 290,290" 
+        fill="none" stroke="#7A3E20" stroke-width="26" stroke-linecap="round"/>
+  <!-- Film Sprocket Holes (Cutout Blue, each >= 1.2mm) -->
+  <circle cx="120" cy="140" r="5" fill="#3B82C8"/>
+  <circle cx="150" cy="115" r="5" fill="#3B82C8"/>
+  <circle cx="185" cy="102" r="5" fill="#3B82C8"/>
+  <circle cx="225" cy="100" r="5" fill="#3B82C8"/>
+  <circle cx="265" cy="105" r="5" fill="#3B82C8"/>
+  <circle cx="305" cy="122" r="5" fill="#3B82C8"/>
+  <circle cx="335" cy="155" r="5" fill="#3B82C8"/>
+  <circle cx="345" cy="195" r="5" fill="#3B82C8"/>
+  <circle cx="335" cy="235" r="5" fill="#3B82C8"/>
+
+  <!-- Main Clapperboard Body (Solid Warm Brown) -->
+  <rect x="155" y="195" width="140" height="90" rx="6" fill="#7A3E20"/>
+
+  <!-- Clapperboard Top Plate (Diagonal stripes) -->
+  <rect x="155" y="195" width="140" height="24" rx="2" fill="#E5A823"/>
+  <polygon points="175,195 190,195 170,219 155,219" fill="#7A3E20"/>
+  <polygon points="215,195 230,195 210,219 195,219" fill="#7A3E20"/>
+  <polygon points="255,195 270,195 250,219 235,219" fill="#7A3E20"/>
+
+  <!-- Clapperboard Open Top Stick (Angled ~22 deg) -->
+  <g transform="rotate(-22 155 195)">
+    <rect x="155" y="171" width="140" height="24" rx="2" fill="#E5A823"/>
+    <polygon points="175,171 190,171 170,195 155,195" fill="#7A3E20"/>
+    <polygon points="215,171 230,171 210,195 195,195" fill="#7A3E20"/>
+    <polygon points="255,171 270,171 250,195 235,195" fill="#7A3E20"/>
+  </g>
+
+  <!-- Big Bold Adventure Star (Left) -->
+  <polygon points="125,210 132,228 150,228 136,240 141,258 125,246 109,258 114,240 100,228 118,228" fill="#E5A823"/>
+
+
+  <!-- Layer 4: Bottom Folded Ribbon Banner -->
+
+  <!-- Ribbon Left Fold Wing -->
+  <polygon points="125,335 80,335 98,365 72,395 125,375" fill="#2E7D47"/>
+  <polygon points="125,355 125,375 140,355" fill="#7A3E20"/>
+
+  <!-- Ribbon Right Fold Wing -->
+  <polygon points="325,335 370,335 352,365 378,395 325,375" fill="#2E7D47"/>
+  <polygon points="325,355 325,375 310,355" fill="#7A3E20"/>
+
+  <!-- Ribbon Main Center Banner -->
+  <path d="M 120,330 Q 225,342 330,330 L 330,375 Q 225,392 120,375 Z" fill="#2E7D47"/>
+
+</svg>
