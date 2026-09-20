@@ -1,0 +1,1515 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>北京秘密行动 · 5天亲子旅行冒险计划 | 把旅行变成孩子的冒险故事</title>
+  <meta name="description" content="这不是普通AI旅游攻略，而是把真实走过的亲子旅行，重新设计成孩子愿意参与的冒险游戏。真实亲子路线 × 游戏化任务 × 实战避坑提醒。">
+  
+  <!-- Web Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Noto+Serif+SC:wght@600;700;900&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==========================================================================
+       DESIGN TOKENS & VISUAL THEME
+       Faithfully reproducing the reference concept design:
+       Vibrant adventure illustration, golden sunshine, Chinese vermilion red,
+       clean white cards, enamel badges, and playful storybook typography.
+       ========================================================================== */
+    :root {
+      --primary-red: #D9381E;
+      --primary-red-hover: #C22F17;
+      --accent-gold: #F4A922;
+      --accent-gold-hover: #E09614;
+      --accent-gold-light: #FEF6E8;
+      --sky-blue: #E8F4FC;
+      --deep-navy: #1C334E;
+      
+      --color-ink-primary: #22201E;
+      --color-ink-secondary: #5C5650;
+      --color-ink-tertiary: #8E877F;
+      --color-ink-light: #C4BCB3;
+
+      --bg-page: #F6F3EC;
+      --bg-card: #FFFFFF;
+      --bg-parchment: #FDFBF7;
+      
+      /* Day Accent Colors */
+      --day-1-color: #E24830;
+      --day-2-color: #3B82F6;
+      --day-3-color: #10B981;
+      --day-4-color: #F59E0B;
+      --day-5-color: #8B5CF6;
+
+      --font-art: "ZCOOL KuaiLe", "Noto Serif SC", sans-serif;
+      --font-heading: "Noto Serif SC", -apple-system, sans-serif;
+      --font-body: "Plus Jakarta Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+
+      --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+      --shadow-card: 0 4px 16px rgba(40, 32, 24, 0.06), 0 1px 3px rgba(40, 32, 24, 0.03);
+      --shadow-float: 0 10px 25px rgba(217, 56, 30, 0.22);
+      --shadow-gold: 0 8px 20px rgba(244, 169, 34, 0.32);
+
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --radius-full: 9999px;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background-color: var(--bg-page);
+      color: var(--color-ink-primary);
+      line-height: 1.55;
+      font-size: 14.5px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      position: relative;
+    }
+
+    /* Outer Wrapper: Centered responsive mobile/tablet container */
+    .app-container {
+      max-width: 520px;
+      margin: 0 auto;
+      min-height: 100vh;
+      background: var(--bg-page);
+      position: relative;
+      box-shadow: 0 0 60px rgba(0, 0, 0, 0.08);
+      padding-bottom: 92px;
+      overflow-x: hidden;
+    }
+
+    /* ==========================================================================
+       TOP NAVIGATION BAR
+       ========================================================================== */
+    .site-nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 16px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .brand-group {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+    }
+
+    .brand-icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 7px;
+      background: linear-gradient(135deg, #F4A922, #D9381E);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #FFFFFF;
+      flex-shrink: 0;
+    }
+
+    .brand-text-box h1 {
+      font-size: 13.5px;
+      font-weight: 800;
+      color: var(--color-ink-primary);
+      line-height: 1.2;
+      font-family: var(--font-body);
+    }
+
+    .brand-text-box p {
+      font-size: 10px;
+      color: var(--color-ink-tertiary);
+      line-height: 1;
+    }
+
+    .nav-btn-action {
+      background: var(--accent-gold);
+      color: #FFFFFF;
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: var(--radius-full);
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      box-shadow: 0 3px 10px rgba(244, 169, 34, 0.28);
+      border: none;
+      cursor: pointer;
+      transition: transform 0.15s ease;
+    }
+
+    .nav-btn-action:active {
+      transform: scale(0.96);
+    }
+
+    /* ==========================================================================
+       HERO SECTION (Replicating the concept art illustration & composition)
+       ========================================================================== */
+    .hero-banner {
+      position: relative;
+      width: 100%;
+      background: #FFFFFF;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .hero-illustration-img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+
+    .hero-action-bar {
+      padding: 14px 18px 20px;
+      background: #FFFFFF;
+      text-align: center;
+    }
+
+    .hero-btn-play {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      background: linear-gradient(135deg, #F5A623, #EA7E12);
+      color: #FFFFFF;
+      text-decoration: none;
+      padding: 14px 20px;
+      border-radius: var(--radius-full);
+      font-weight: 800;
+      font-size: 15.5px;
+      letter-spacing: 0.03em;
+      box-shadow: var(--shadow-gold);
+      cursor: pointer;
+      border: none;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .hero-btn-play:active {
+      transform: scale(0.98);
+      box-shadow: 0 4px 12px rgba(245, 166, 35, 0.25);
+    }
+
+    .hero-btn-play svg {
+      width: 18px;
+      height: 18px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .hero-sub-badges {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 12px;
+      font-size: 11.5px;
+      font-weight: 700;
+      color: var(--color-ink-secondary);
+    }
+
+    .hero-sub-badges span {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    /* ==========================================================================
+       6 CORE ADVANTAGE CARDS (Matching the reference's white card row)
+       ========================================================================== */
+    .features-row-wrap {
+      padding: 18px 16px 14px;
+      background: var(--bg-page);
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+
+    .feature-card {
+      background: #FFFFFF;
+      border-radius: var(--radius-md);
+      padding: 12px 8px 10px;
+      text-align: center;
+      box-shadow: var(--shadow-card);
+      border: 1px solid rgba(0, 0, 0, 0.04);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: transform 0.15s ease;
+    }
+
+    .feature-card:active {
+      transform: translateY(1px);
+    }
+
+    .feature-icon-img {
+      width: 38px;
+      height: 38px;
+      object-fit: contain;
+      margin-bottom: 6px;
+    }
+
+    .feature-name {
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--color-ink-primary);
+      margin-bottom: 3px;
+    }
+
+    .feature-desc {
+      font-size: 9.5px;
+      color: var(--color-ink-tertiary);
+      line-height: 1.25;
+    }
+
+    /* ==========================================================================
+       HOW IT WORKS (4 Step Game Loop)
+       ========================================================================== */
+    .mechanics-bar {
+      margin: 6px 16px 18px;
+      background: #FFFFFF;
+      border-radius: var(--radius-md);
+      padding: 14px 14px;
+      box-shadow: var(--shadow-card);
+      border: 1px solid rgba(0, 0, 0, 0.04);
+    }
+
+    .mechanics-header {
+      font-size: 12.5px;
+      font-weight: 800;
+      color: var(--color-ink-primary);
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .mechanics-steps-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+    }
+
+    .step-pill {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 3px;
+      text-align: center;
+      flex: 1;
+    }
+
+    .step-circle {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--sky-blue);
+      color: var(--deep-navy);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .step-circle.c1 { background: #FEE2E2; color: #DC2626; }
+    .step-circle.c2 { background: #FEF3C7; color: #D97706; }
+    .step-circle.c3 { background: #D1FAE5; color: #059669; }
+    .step-circle.c4 { background: #DBEAFE; color: #2563EB; }
+
+    .step-title {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--color-ink-primary);
+    }
+
+    .step-arrow {
+      color: var(--color-ink-light);
+      font-size: 11px;
+      margin-top: -12px;
+    }
+
+    .mechanics-tip {
+      margin-top: 10px;
+      padding-top: 8px;
+      border-top: 1px dashed rgba(0, 0, 0, 0.06);
+      font-size: 11px;
+      color: var(--color-ink-secondary);
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .mechanics-tip strong {
+      color: var(--primary-red);
+    }
+
+    /* ==========================================================================
+       SECTION HEADER: ITINERARY 5 CHAPTERS
+       ========================================================================== */
+    .section-headline-bar {
+      padding: 16px 16px 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .headline-main {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .scroll-badge-icon {
+      width: 36px;
+      height: 36px;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+
+    .headline-texts h2 {
+      font-size: 16.5px;
+      font-weight: 800;
+      color: var(--color-ink-primary);
+      line-height: 1.25;
+      font-family: var(--font-heading);
+    }
+
+    .headline-texts p {
+      font-size: 11px;
+      color: var(--color-ink-tertiary);
+      margin-top: 1px;
+    }
+
+    .tag-full-route {
+      background: var(--accent-gold-light);
+      color: #B45309;
+      font-size: 10.5px;
+      font-weight: 800;
+      padding: 4px 9px;
+      border-radius: var(--radius-full);
+      white-space: nowrap;
+      border: 1px solid rgba(245, 158, 11, 0.2);
+    }
+
+    /* ==========================================================================
+       DAY CARDS (Replicating the exact reference card layout & rhythm)
+       ========================================================================== */
+    .itinerary-cards-container {
+      padding: 0 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .day-card {
+      background: var(--bg-card);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-card);
+      border: 1px solid rgba(0, 0, 0, 0.05);
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* Card Top Header Banner */
+    .card-top-header {
+      padding: 12px 14px 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+    }
+
+    .day-pill-tag {
+      font-size: 11px;
+      font-weight: 800;
+      color: #FFFFFF;
+      padding: 3px 9px;
+      border-radius: 6px;
+      letter-spacing: 0.04em;
+    }
+
+    .day-pill-1 { background: var(--day-1-color); }
+    .day-pill-2 { background: var(--day-2-color); }
+    .day-pill-3 { background: var(--day-3-color); }
+    .day-pill-4 { background: var(--day-4-color); }
+    .day-pill-5 { background: var(--day-5-color); }
+
+    .day-main-theme {
+      font-size: 15px;
+      font-weight: 800;
+      color: var(--color-ink-primary);
+      font-family: var(--font-heading);
+    }
+
+    .day-site-sub {
+      margin-left: auto;
+      font-size: 11.5px;
+      color: var(--color-ink-tertiary);
+      font-weight: 600;
+    }
+
+    /* Card Photo Thumbnail */
+    .card-media-wrap {
+      width: calc(100% - 24px);
+      height: 140px;
+      margin: 10px 12px 8px;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    }
+
+    .card-media-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .card-media-wrap:hover .card-media-img {
+      transform: scale(1.03);
+    }
+
+    .card-hook-desc {
+      padding: 2px 14px 8px;
+      font-size: 12.5px;
+      font-weight: 700;
+      color: var(--color-ink-secondary);
+      line-height: 1.4;
+    }
+
+    /* Quest list with colored bullets */
+    .quest-list {
+      list-style: none;
+      padding: 0 14px 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .quest-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 7px;
+      font-size: 12.5px;
+      color: var(--color-ink-secondary);
+      line-height: 1.45;
+    }
+
+    .quest-bullet {
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 9px;
+      font-weight: 800;
+      margin-top: 1px;
+    }
+
+    .bullet-main { background: #FEE2E2; color: #DC2626; }
+    .bullet-side { background: #DBEAFE; color: #2563EB; }
+    .bullet-reward { background: #FEF3C7; color: #D97706; }
+
+    .quest-item strong {
+      color: var(--color-ink-primary);
+      font-weight: 700;
+    }
+
+    /* ==========================================================================
+       AUTHENTIC FIELD NOTES & TESTED TIPS (2-3 items, high visual polish)
+       ========================================================================== */
+    .field-tip-box {
+      margin: 2px 0 6px 0;
+      background: #FFFDF9;
+      border: 1px solid #EADBCA;
+      border-radius: var(--radius-md);
+      padding: 12px 14px;
+      position: relative;
+      box-shadow: 0 2px 10px rgba(180, 140, 90, 0.08);
+      background-image: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 21px,
+        rgba(220, 205, 185, 0.25) 21px,
+        rgba(220, 205, 185, 0.25) 22px
+      );
+    }
+
+    .field-tip-box::before {
+      content: "";
+      position: absolute;
+      top: -6px;
+      left: 24px;
+      width: 50px;
+      height: 12px;
+      background: rgba(225, 212, 188, 0.85);
+      border: 1px solid rgba(190, 175, 150, 0.5);
+      transform: rotate(-2deg);
+      border-radius: 2px;
+    }
+
+    .field-tip-header {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 6px;
+    }
+
+    .tip-stamp-tag {
+      background: var(--primary-red);
+      color: #FFFFFF;
+      font-size: 10px;
+      font-weight: 800;
+      padding: 2px 6px;
+      border-radius: 4px;
+      letter-spacing: 0.04em;
+    }
+
+    .tip-stamp-title {
+      font-size: 12px;
+      font-weight: 800;
+      color: #6A3E26;
+    }
+
+    .field-tip-text {
+      font-size: 12px;
+      color: #4C3F36;
+      line-height: 1.55;
+    }
+
+    .field-tip-text strong {
+      color: #261E1A;
+      font-weight: 800;
+    }
+
+    /* ==========================================================================
+       BADGES SHOWCASE (Matching reference's badge row + quote bubble)
+       ========================================================================== */
+    .badge-showcase-section {
+      margin-top: 24px;
+      padding: 20px 16px;
+      background: #FFFFFF;
+      border-top: 1px solid rgba(0, 0, 0, 0.05);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .badge-section-title {
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--color-ink-primary);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--font-heading);
+    }
+
+    /* Row of 6 Badges */
+    .badges-scroll-row {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 6px;
+      margin-bottom: 16px;
+    }
+
+    .badge-item-box {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .badge-thumb-img {
+      width: 54px;
+      height: 54px;
+      object-fit: contain;
+      border-radius: 50%;
+      filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.12));
+      transition: transform 0.2s ease;
+    }
+
+    .badge-thumb-img:hover {
+      transform: scale(1.08);
+    }
+
+    .badge-caption {
+      font-size: 10px;
+      font-weight: 700;
+      color: var(--color-ink-primary);
+      margin-top: 4px;
+      line-height: 1.15;
+    }
+
+    /* Testimonial Quote Bubble with Avatar */
+    .testimonial-quote-box {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: var(--bg-parchment);
+      border-radius: var(--radius-md);
+      padding: 12px 14px;
+      border: 1px solid rgba(0, 0, 0, 0.06);
+    }
+
+    .quote-content {
+      flex: 1;
+    }
+
+    .quote-text {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--color-ink-primary);
+      line-height: 1.45;
+    }
+
+    .quote-author {
+      font-size: 10.5px;
+      color: var(--color-ink-tertiary);
+      margin-top: 3px;
+    }
+
+    .quote-avatar-img {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      border: 2px solid var(--accent-gold);
+      object-fit: cover;
+      flex-shrink: 0;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    /* ==========================================================================
+       FOOTER CTA BANNER (Parchment scroll + wooden sign style)
+       ========================================================================== */
+    .footer-cta-wrapper {
+      position: relative;
+      background: #FFFFFF;
+      padding: 24px 16px 28px;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .parchment-scroll-card {
+      background: #FFFBF0;
+      border: 2px solid #E5D5BA;
+      border-radius: var(--radius-lg);
+      padding: 22px 18px;
+      box-shadow: var(--shadow-card);
+      position: relative;
+      z-index: 2;
+    }
+
+    .parchment-scroll-card::before, .parchment-scroll-card::after {
+      content: "";
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #D5C2A3;
+      border: 2px solid #FFFBF0;
+      box-shadow: inset 0 1px 2px rgba(0,0,0,0.2);
+    }
+
+    .parchment-scroll-card::before { top: 8px; left: 8px; }
+    .parchment-scroll-card::after { top: 8px; right: 8px; }
+
+    .cta-big-title {
+      font-size: 19px;
+      font-weight: 900;
+      color: var(--color-ink-primary);
+      line-height: 1.3;
+      font-family: var(--font-heading);
+      margin-bottom: 6px;
+    }
+
+    .cta-sub-note {
+      font-size: 12px;
+      color: var(--color-ink-tertiary);
+      margin-bottom: 16px;
+    }
+
+    .btn-cta-golden {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      background: linear-gradient(135deg, #F5A623, #EA7E12);
+      color: #FFFFFF;
+      padding: 15px 22px;
+      border-radius: var(--radius-full);
+      font-size: 16px;
+      font-weight: 800;
+      letter-spacing: 0.03em;
+      box-shadow: var(--shadow-gold);
+      border: none;
+      cursor: pointer;
+      transition: transform 0.15s ease;
+    }
+
+    .btn-cta-golden:active {
+      transform: scale(0.98);
+    }
+
+    .btn-cta-golden svg {
+      width: 18px;
+      height: 18px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .cta-foot-promise {
+      margin-top: 10px;
+      font-size: 11px;
+      color: var(--color-ink-tertiary);
+    }
+
+    .footer-decor-strip {
+      margin-top: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .wooden-sign-img {
+      height: 60px;
+      width: auto;
+      object-fit: contain;
+      filter: drop-shadow(0 2px 6px rgba(0,0,0,0.1));
+    }
+
+    /* ==========================================================================
+       STICKY BOTTOM BAR (Mobile Access)
+       ========================================================================== */
+    .sticky-bottom-action {
+      position: fixed;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      max-width: 520px;
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-top: 1px solid rgba(0, 0, 0, 0.08);
+      padding: 10px 16px max(10px, env(safe-area-inset-bottom));
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      z-index: 90;
+      box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.05);
+    }
+
+    .sticky-info-label {
+      flex: 1;
+    }
+
+    .sticky-title {
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--color-ink-primary);
+      display: block;
+    }
+
+    .sticky-desc {
+      font-size: 11px;
+      color: var(--color-ink-tertiary);
+      display: block;
+    }
+
+    .sticky-btn-gold {
+      background: linear-gradient(135deg, #F5A623, #EA7E12);
+      color: #FFFFFF;
+      padding: 10px 18px;
+      border-radius: var(--radius-full);
+      font-size: 13.5px;
+      font-weight: 800;
+      border: none;
+      cursor: pointer;
+      white-space: nowrap;
+      box-shadow: 0 3px 10px rgba(245, 166, 35, 0.28);
+    }
+
+    /* ==========================================================================
+       MODAL: TEST VERSION INTENT CAPTURE
+       ========================================================================== */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(28, 33, 44, 0.65);
+      backdrop-filter: blur(5px);
+      -webkit-backdrop-filter: blur(5px);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s ease;
+    }
+
+    .modal-backdrop.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .modal-box {
+      background: #FFFFFF;
+      width: 100%;
+      max-width: 380px;
+      border-radius: var(--radius-lg);
+      padding: 26px 20px 22px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+      position: relative;
+      transform: translateY(20px) scale(0.96);
+      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      text-align: center;
+    }
+
+    .modal-backdrop.active .modal-box {
+      transform: translateY(0) scale(1);
+    }
+
+    .modal-close-btn {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--bg-page);
+      border: none;
+      color: var(--color-ink-tertiary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 18px;
+    }
+
+    .modal-tag {
+      display: inline-block;
+      background: #FEE2E2;
+      color: var(--primary-red);
+      font-size: 11px;
+      font-weight: 800;
+      padding: 4px 10px;
+      border-radius: var(--radius-full);
+      margin-bottom: 8px;
+    }
+
+    .modal-title {
+      font-size: 19px;
+      font-weight: 800;
+      margin-bottom: 6px;
+      font-family: var(--font-heading);
+    }
+
+    .modal-intro {
+      font-size: 13px;
+      color: var(--color-ink-secondary);
+      line-height: 1.5;
+      margin-bottom: 16px;
+    }
+
+    .modal-form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
+    .form-input {
+      width: 100%;
+      padding: 12px 14px;
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(0, 0, 0, 0.12);
+      background: #FAF8F5;
+      font-family: inherit;
+      font-size: 13.5px;
+      color: var(--color-ink-primary);
+      outline: none;
+    }
+
+    .form-input:focus {
+      border-color: var(--accent-gold);
+      background: #FFFFFF;
+    }
+
+    .form-select {
+      appearance: none;
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%238E877F' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+      background-repeat: no-repeat;
+      background-position: right 14px center;
+      background-size: 14px;
+    }
+
+    .modal-btn-submit {
+      background: linear-gradient(135deg, #F5A623, #EA7E12);
+      color: #FFFFFF;
+      border: none;
+      padding: 13px;
+      border-radius: var(--radius-full);
+      font-size: 15px;
+      font-weight: 800;
+      cursor: pointer;
+      box-shadow: 0 4px 14px rgba(245, 166, 35, 0.3);
+    }
+
+    .modal-bottom-tip {
+      font-size: 11px;
+      color: var(--color-ink-tertiary);
+    }
+
+    /* Toast Notification */
+    .toast-box {
+      position: fixed;
+      top: 24px;
+      left: 50%;
+      transform: translateX(-50%) translateY(-70px);
+      background: #1C2430;
+      color: #FFFFFF;
+      padding: 10px 18px;
+      border-radius: var(--radius-full);
+      font-size: 13px;
+      font-weight: 700;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      z-index: 2000;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: transform 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+      pointer-events: none;
+    }
+
+    .toast-box.show {
+      transform: translateX(-50%) translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="app-container">
+    
+    <!-- TOP NAVIGATION BAR -->
+    <nav class="site-nav">
+      <a href="#hero" class="brand-group">
+        <div class="brand-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="3 11 22 2 13 21 11 13 3 11"></polygon></svg>
+        </div>
+        <div class="brand-text-box">
+          <h1>亲子冒险探索计划</h1>
+          <p>让每一次旅行，都成为孩子的成长冒险</p>
+        </div>
+      </a>
+      <button class="nav-btn-action" id="btn-nav-book">
+        <span>开始定制</span>
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+      </button>
+    </nav>
+
+    <!-- 1. HERO SECTION (Replicating the reference illustration & composition) -->
+    <header class="hero-banner" id="hero">
+      <!-- High definition cropped hero artwork with boy explorer, father, Forbidden City, and 3D Pop lettering -->
+      <img src="assets/hero_art.jpg" alt="北京秘密行动 · 5天亲子旅行冒险" class="hero-illustration-img">
+
+      <!-- Hero Call to Action -->
+      <div class="hero-action-bar">
+        <button class="hero-btn-play" id="btn-hero-scroll">
+          <span>看看怎么玩</span>
+          <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
+        </button>
+
+        <div class="hero-sub-badges">
+          <span>📍 真实亲子路线</span>
+          <span>•</span>
+          <span>🎮 游戏化任务</span>
+          <span>•</span>
+          <span>💡 实战避坑提示</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- 2. 6 CORE VALUE CARDS (Matching reference white cards) -->
+    <section class="features-row-wrap" id="features">
+      <div class="features-grid">
+        <!-- Card 1 -->
+        <div class="feature-card">
+          <img src="assets/feat_icon_1.png" alt="专属定制" class="feature-icon-img">
+          <h3 class="feature-name">专属定制</h3>
+          <p class="feature-desc">为你家孩子量身打造</p>
+        </div>
+        <!-- Card 2 -->
+        <div class="feature-card">
+          <img src="assets/feat_icon_2.png" alt="游戏化体验" class="feature-icon-img">
+          <h3 class="feature-name">游戏化体验</h3>
+          <p class="feature-desc">任务 · 徽章 · 成就感</p>
+        </div>
+        <!-- Card 3 -->
+        <div class="feature-card">
+          <img src="assets/feat_icon_3.png" alt="文化趣味结合" class="feature-icon-img">
+          <h3 class="feature-name">文化趣味结合</h3>
+          <p class="feature-desc">历史不再枯燥无味</p>
+        </div>
+        <!-- Card 4 -->
+        <div class="feature-card">
+          <img src="assets/feat_icon_4.png" alt="拍照打卡挑战" class="feature-icon-img">
+          <h3 class="feature-name">拍照打卡挑战</h3>
+          <p class="feature-desc">记录沿途美好瞬间</p>
+        </div>
+        <!-- Card 5 -->
+        <div class="feature-card">
+          <img src="assets/feat_icon_5.png" alt="孩子更主动" class="feature-icon-img">
+          <h3 class="feature-name">孩子更主动</h3>
+          <p class="feature-desc">从“被带着走”到“我要去完成”</p>
+        </div>
+        <!-- Card 6 -->
+        <div class="feature-card">
+          <img src="assets/feat_icon_6.png" alt="适合亲子同行" class="feature-icon-img">
+          <h3 class="feature-name">适合亲子同行</h3>
+          <p class="feature-desc">高质量的沉浸陪伴</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. HOW IT WORKS (4-Step Loop) -->
+    <section class="mechanics-bar" id="rules">
+      <div class="mechanics-header">
+        <span>🎮 探险家破关机制（让孩子主动走完全程）</span>
+      </div>
+      <div class="mechanics-steps-row">
+        <div class="step-pill">
+          <div class="step-circle c1">1</div>
+          <span class="step-title">踏入景点</span>
+        </div>
+        <span class="step-arrow">→</span>
+        <div class="step-pill">
+          <div class="step-circle c2">2</div>
+          <span class="step-title">领取任务</span>
+        </div>
+        <span class="step-arrow">→</span>
+        <div class="step-pill">
+          <div class="step-circle c3">3</div>
+          <span class="step-title">现场挑战</span>
+        </div>
+        <span class="step-arrow">→</span>
+        <div class="step-pill">
+          <div class="step-circle c4">4</div>
+          <span class="step-title">解锁徽章</span>
+        </div>
+      </div>
+      <div class="mechanics-tip">
+        <span>💡</span>
+        <span>核心心智：孩子不是跟着父母赶路，而是在<strong>完成属于自己的探险破关</strong>！</span>
+      </div>
+    </section>
+
+    <!-- 4. ITINERARY 5 CHAPTERS (Beijing Real Field Test Itinerary) -->
+    <section id="itinerary">
+      <div class="section-headline-bar">
+        <div class="headline-main">
+          <img src="assets/header_scroll_icon.png" alt="行程章节" class="scroll-badge-icon">
+          <div class="headline-texts">
+            <h2>行程示例 · 5天5个精彩章节</h2>
+            <p>真实路线实测，每一天都是一个新的冒险故事！</p>
+          </div>
+        </div>
+        <span class="tag-full-route">实测路线 ➔</span>
+      </div>
+
+      <div class="itinerary-cards-container">
+        
+        <!-- DAY 1: 慕田峪长城 -->
+        <article class="day-card">
+          <div class="card-top-header">
+            <span class="day-pill-tag day-pill-1">Day 1</span>
+            <h3 class="day-main-theme">长城守卫战</h3>
+            <span class="day-site-sub">慕田峪长城</span>
+          </div>
+
+          <div class="card-media-wrap">
+            <img src="assets/day1_wall.jpg" alt="慕田峪长城" class="card-media-img">
+          </div>
+
+          <p class="card-hook-desc">登上长城，寻找古代守卫的防御密码！</p>
+
+          <ul class="quest-list">
+            <li class="quest-item">
+              <span class="quest-bullet bullet-main">主</span>
+              <span><strong>主线任务：</strong>在第14至15号敌楼间寻找 3 处古代防御射孔与垛口</span>
+            </li>
+            <li class="quest-item">
+              <span class="quest-bullet bullet-side">支</span>
+              <span><strong>支线挑战：</strong>在视野开阔处拍下一张「小将军守望」英姿合影</span>
+            </li>
+            <li class="quest-item">
+              <span class="quest-bullet bullet-reward">奖</span>
+              <span><strong>通关奖励：</strong>解锁「长城守卫者」实体铜色荣誉徽章</span>
+            </li>
+          </ul>
+        </article>
+
+        <!-- 亲测提示 01 (慕田峪实测) -->
+        <aside class="field-tip-box">
+          <div class="field-tip-header">
+            <span class="tip-stamp-tag">亲测提示</span>
+            <span class="tip-stamp-title">慕田峪长城索道与摆渡车实测</span>
+          </div>
+          <p class="field-tip-text">
+            带娃爬长城建议<strong>上山选封闭式缆车直达14号敌楼</strong>，把孩子有限的体力留给长城精华段探索；下山大童可体验滑道。千万不要把集合时间掐太紧，从摆渡车站到缆车入口的步行坡道比想象中耗时，<strong>务必预留至少30分钟换乘缓冲</strong>。
+          </p>
+        </aside>
+
+        <!-- DAY 2: 北京环球影城 -->
+        <article class="day-card">
+          <div class="card-top-header">
+            <span class="day-pill-tag day-pill-2">Day 2</span>
+            <h3 class="day-main-theme">电影世界挑战</h3>
+            <span class="day-site-sub">北京环球影城</span>
+          </div>
+
+          <div class="card-media-wrap">
+            <img src="assets/day2_universal.jpg" alt="北京环球影城" class="card-media-img">
+          </div>
+
+          <p class="card-hook-desc">走进奇幻电影世界，破译特工秘密挑战！</p>
+
+          <ul class="quest-list">
+            <li class="quest-item">
+              <span class="quest-bullet bullet-main">主</span>
+              <span><strong>主线任务：</strong>在哈利·波特园区寻找 2 处互动橱窗并念对魔咒口诀</span>
+            </li>
+            <li class="quest-item">
+              <span class="quest-bullet bullet-side">支</span>
+              <span><strong>支线挑战：</strong>在变形金刚基地记录「霸天虎」的机械装甲破损特征</span>
+            </li>
+            <li class="quest-item">
+              <span class="quest-bullet bullet-reward">奖</span>
+              <span><strong>通关奖励：</strong>品尝黄油啤酒，晋升「光影特工」荣誉称号</span>
+            </li>
+          </ul>
+        </article>
+
+        <!-- 亲测提示 02 (热门乐园避坑) -->
+        <aside class="field-tip-box">
+          <div class="field-tip-header">
+            <span class="tip-stamp-tag">踩坑提醒</span>
+            <span class="tip-stamp-title">大型热门乐园切忌“项目紧密衔接”</span>
+          </div>
+          <p class="field-tip-text">
+            预约时间<strong>绝不等于真正开始游玩的时间</strong>！安检、分批放行、找洗手间与各园区之间的步行路程极大。<strong>每天只需确定 2 个最想达成的核心愿望项目</strong>，其余时间把节奏交给孩子的偶遇与探索，否则大人催促、孩子崩溃。
+          </p>
+        </aside>
+
+        <!-- DAY 3: 正阳门 + 故宫 -->
+        <article class="day-card">
+          <div class="card-top-header">
+            <span class="day-pill-tag day-pill-3">Day 3</span>
+            <h3 class="day-main-theme">寻找紫禁城密码</h3>
+            <span class="day-site-sub">正阳门 + 故宫</span>
+          </div>
+
+          <div class="card-media-wrap">
+            <img src="assets/day2_palace.jpg" alt="故宫紫禁城" class="card-media-img">
+          </div>
+
+          <p class="card-hook-desc">穿梭北京中轴线，解开皇宫的千年暗号！</p>
+
+          <ul class="quest-list">
+            <li class="quest-item">
+              <span class="quest-bullet bullet-main">主</span>
+              <span><strong>主线任务：</strong>穿过正阳门，用小指南针辨认北京中轴线的正南正北</span>
+            </li>
+            <li class="quest-item">
+              <span class="quest-bullet bullet-side">支</span>
+              <span><strong>支线挑战：</strong>在太和殿屋脊上找出传说中的“脊兽护卫战队”并数出数量</span>
+            </li>
+            <li class="quest-item">
+              <span class="quest-bullet bullet-reward">奖</span>
+              <span><strong>通关奖励：</strong>寻找殿前大水缸金光刻痕，解锁「紫禁城侦探」符印</span>
+            </li>
+          </ul>
+        </article>
+
+        <!-- DAY 4: 中国国家博物馆 + 闲庭漫步 -->
+        <article class="day-card">
+          <div class="card-top-header">
+            <span class="day-pill-tag day-pill-4">Day 4</span>
+            <h3 class="day-main-theme">时间旅行者</h3>
+            <span class="day-site-sub">国博 + 下午轻松留白</span>
+          </div>
+
+          <div class="card-media-wrap">
+            <img src="assets/day3_museum.jpg" alt="中国国家博物馆" class="card-media-img">
+          </div>
+
+          <p class="card-hook-desc">漫步文明殿堂，下午在绿荫下轻松复盘！</p>
+
+          <ul class="quest-list">
+            <li class="quest-item">
+              <span class="quest-bullet bullet-main">主</span>
+              <span><strong>主线任务：</strong>在古代中国展厅找到课本里见过的青铜重器与陶俑</span>
+            </li>
+            <li class="quest-item">
+              <span class="quest-bullet bullet-side">支</span>
+              <span><strong>支线挑战：</strong>挑选一件最喜欢的古代文物，画出它的轮廓速写</span>
+            </li>
+            <li class="quest-item">
+              <span class="quest-bullet bullet-reward">奖</span>
+              <span><strong>留白休整：</strong>下午弱化行程喝茶整理手账，解锁「时空漫步者」勋章</span>
+            </li>
+          </ul>
+        </article>
+
+        <!-- 亲测提示 03 (第4天留白) -->
+        <aside class="field-tip-box">
+          <div class="field-tip-header">
+            <span class="tip-stamp-tag">亲测经验</span>
+            <span class="tip-stamp-title">第4天的下午为什么要“做减法”？</span>
+          </div>
+          <p class="field-tip-text">
+            国博馆藏极其丰富且步行量巨大，走完半天孩子脚力和注意力已达临界点。<strong>千万不要在下午再强行加塞打卡景点</strong>。找一家老街树荫坐坐，吃根冰棍，让孩子复盘前几天的收获，这才是亲子旅行能持久愉悦的秘诀。
+          </p>
+        </aside>
+
+        <!-- DAY 5: 天安门广场 (升旗可选弹性任务) -->
+        <article class="day-card">
+          <div class="card-top-header">
+            <span class="day-pill-tag day-pill-5">Day 5</span>
+            <h3 class="day-main-theme">黎明守望者</h3>
+            <span class="day-site-sub">天安门广场 · 可选弹性</span>
+          </div>
+
+          <div class="card-media-wrap">
+            <img src="assets/day5_sunrise.jpg" alt="天安门晨曦" class="card-media-img">
+          </div>
+
+          <p class="card-hook-desc">黎明第一缕阳光，弹性自选的终极打卡！</p>
+
+          <ul class="quest-list">
+            <li class="quest-item">
+              <span class="quest-bullet bullet-main">选</span>
+              <span><strong>弹性选择：</strong>视全家精力和作息自愿选择是否早起看升旗（非强制）</span>
+            </li>
+            <li class="quest-item">
+              <span class="quest-bullet bullet-side">支</span>
+              <span><strong>自愿打卡：</strong>若起得早见证国旗升起，若睡饱则清晨漫步长安街</span>
+            </li>
+            <li class="quest-item">
+              <span class="quest-bullet bullet-reward">奖</span>
+              <span><strong>终极大奖：</strong>完成 5 天全部任务大通关，授予「北京大探险家」</span>
+            </li>
+          </ul>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- 5. BADGES SHOWCASE (Matching reference row + quote bubble) -->
+    <section class="badge-showcase-section" id="badges">
+      <h2 class="badge-section-title">
+        <span>🏅</span>
+        <span>完成任务，收集专属徽章！</span>
+      </h2>
+
+      <div class="badges-scroll-row">
+        <div class="badge-item-box">
+          <img src="assets/badge_1.jpg" alt="长城勇士" class="badge-thumb-img">
+          <span class="badge-caption">长城守卫者</span>
+        </div>
+        <div class="badge-item-box">
+          <img src="assets/badge_2.jpg" alt="故宫小侦探" class="badge-thumb-img">
+          <span class="badge-caption">故宫小侦探</span>
+        </div>
+        <div class="badge-item-box">
+          <img src="assets/badge_3.jpg" alt="文物达人" class="badge-thumb-img">
+          <span class="badge-caption">文物达人</span>
+        </div>
+        <div class="badge-item-box">
+          <img src="assets/badge_4.jpg" alt="光影特工" class="badge-thumb-img">
+          <span class="badge-caption">光影特工</span>
+        </div>
+        <div class="badge-item-box">
+          <img src="assets/badge_5.jpg" alt="时空漫步者" class="badge-thumb-img">
+          <span class="badge-caption">时空探险家</span>
+        </div>
+        <div class="badge-item-box">
+          <img src="assets/badge_6.jpg" alt="北京大探险家" class="badge-thumb-img">
+          <span class="badge-caption">北京通</span>
+        </div>
+      </div>
+
+      <!-- Testimonial Quote with Child Avatar -->
+      <div class="testimonial-quote-box">
+        <div class="quote-content">
+          <p class="quote-text">“我最喜欢找神兽的任务，感觉自己像一个真正的探险家！”</p>
+          <p class="quote-author">—— 体验官小探险家（8岁）</p>
+        </div>
+        <img src="assets/avatar_boy.jpg" alt="探险小玩家" class="quote-avatar-img">
+      </div>
+    </section>
+
+    <!-- 6. FINAL CTA BANNER (Ancient parchment scroll style) -->
+    <footer class="footer-cta-wrapper" id="cta">
+      <div class="parchment-scroll-card">
+        <h2 class="cta-big-title">现在就开启<br>你们的专属旅行冒险吧！</h2>
+        <p class="cta-sub-note">下一次旅行，让孩子成为故事的主角</p>
+
+        <button class="btn-cta-golden" id="btn-cta-main" type="button">
+          <svg viewBox="0 0 24 24"><polygon points="3 11 22 2 13 21 11 13 3 11"></polygon></svg>
+          <span>定制我的冒险计划</span>
+          <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </button>
+
+        <p class="cta-foot-promise">只需 1 分钟，生成属于你家的先锋实测计划</p>
+      </div>
+
+      <div class="footer-decor-strip">
+        <img src="assets/wooden_sign_clean.jpg" alt="世界很大我们一起去看看" class="wooden-sign-img">
+      </div>
+    </footer>
+
+  </div><!-- /app-container -->
+
+  <!-- STICKY BOTTOM QUICK ACTION BAR -->
+  <aside class="sticky-bottom-action">
+    <div class="sticky-info-label">
+      <span class="sticky-title">北京 · 5日亲子冒险计划</span>
+      <span class="sticky-desc">真实家庭实测 · 游戏化破关</span>
+    </div>
+    <button class="sticky-btn-gold" id="btn-sticky-open">定制冒险计划</button>
+  </aside>
+
+  <!-- MODAL DIALOG: TEST VERSION INQUIRY -->
+  <div class="modal-backdrop" id="modal-backdrop">
+    <div class="modal-box" role="dialog" aria-modal="true">
+      <button class="modal-close-btn" id="modal-close-btn" aria-label="关闭">&times;</button>
+      
+      <span class="modal-tag">先锋体验通道</span>
+      <h3 class="modal-title">测试版开放中</h3>
+      <p class="modal-intro">
+        感谢你对「亲子旅行冒险计划」的认可！我们正在为下一批出行家庭开放一对一定制内测。
+      </p>
+
+      <form class="modal-form" id="inquiry-form" onsubmit="event.preventDefault(); handleFormSubmit();">
+        <input type="text" class="form-input" id="input-city" placeholder="你的意向出行城市（如：北京、西安、成都）" required>
+        <select class="form-input form-select" id="input-age" required>
+          <option value="" disabled selected>孩子年龄段</option>
+          <option value="4-6岁（幼儿趣味版）">4–6岁（幼儿趣味版）</option>
+          <option value="7-9岁（小学探索版）">7–9岁（小学探索版）</option>
+          <option value="10-12岁（少年挑战版）">10–12岁（少年挑战版）</option>
+        </select>
+        <input type="text" class="form-input" id="input-contact" placeholder="微信号 或 小红书账号（用于接收计划）" required>
+        <button type="submit" class="modal-btn-submit">提交先锋预约</button>
+      </form>
+
+      <span class="modal-bottom-tip">绝不发送垃圾信息 · 真实旅行策划师 1对1 沟通</span>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION -->
+  <div class="toast-box" id="toast-box">
+    <span>✨ 预约已登记！主理人将在 12 小时内与你联络。</span>
+  </div>
+
+  <script>
+    // Smooth scroll for "看看怎么玩"
+    document.getElementById('btn-hero-scroll').addEventListener('click', function(e) {
+      e.preventDefault();
+      const target = document.getElementById('features');
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+
+    // Modal Interaction
+    const modalBackdrop = document.getElementById('modal-backdrop');
+    const modalCloseBtn = document.getElementById('modal-close-btn');
+    const btnNavBook = document.getElementById('btn-nav-book');
+    const btnCtaMain = document.getElementById('btn-cta-main');
+    const btnStickyOpen = document.getElementById('btn-sticky-open');
+    const toastBox = document.getElementById('toast-box');
+
+    function openModal() {
+      modalBackdrop.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      modalBackdrop.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    btnNavBook.addEventListener('click', openModal);
+    btnCtaMain.addEventListener('click', openModal);
+    btnStickyOpen.addEventListener('click', openModal);
+    modalCloseBtn.addEventListener('click', closeModal);
+
+    modalBackdrop.addEventListener('click', function(e) {
+      if (e.target === modalBackdrop) {
+        closeModal();
+      }
+    });
+
+    // Form Submission
+    function handleFormSubmit() {
+      const city = document.getElementById('input-city').value;
+      const age = document.getElementById('input-age').value;
+      const contact = document.getElementById('input-contact').value;
+
+      if (!city || !age || !contact) return;
+
+      closeModal();
+      showToast();
+
+      document.getElementById('inquiry-form').reset();
+    }
+
+    function showToast() {
+      toastBox.classList.add('show');
+      setTimeout(() => {
+        toastBox.classList.remove('show');
+      }, 3500);
+    }
+  </script>
+</body>
+</html>
